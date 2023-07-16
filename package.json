@@ -1,0 +1,20 @@
+{
+    "name": "stats",
+    "version": "1.0.1",
+    "description": "Script for displayin stats from vamsys",
+    "main": "index.js",
+    "scripts": {
+        "build": "webpack --mode=production"
+    },
+    "devDependencies": {
+        "@tsconfig/recommended": "1.0.2",
+        "typescript": "5.1.6",
+        "webpack-cli": "5.1.4"
+    },
+    "dependencies": {
+        "systemjs": "6.14.1",
+        "ts-loader": "9.4.4",
+        "webpack": "5.88.1",
+        "webpack-node-externals": "3.0.0"
+    }
+}
