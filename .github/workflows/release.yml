@@ -1,0 +1,28 @@
+name: Build & Releaae
+on:
+    push:
+        tags:
+            - 'v.*'
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+            - uses: actions/setup-node@v3
+              with:
+                node-version: 'lts/Hydrogen'
+            - name: Install Packages
+              run: npm ci
+            - name: Make the file 
+              run: npx webpack --mode=production
+            - name: Uplaod to Bucket
+              uses: shallwefootball/upload-s3-action@v1.3.3
+              with:
+                aws_key_id: ${{ secrets.AWS_ACCESS_KEY_ID}}
+                aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+                aws_bucket: ${{ secrets.AWS_BUCKET }}
+                source_dir: 'dist/bundle.js'
+                destination_dir: 'stats'  
+              
+            
