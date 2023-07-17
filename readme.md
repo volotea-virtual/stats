@@ -4,7 +4,7 @@ stats is a javascript script used for displaying stats from vamsys to the Virtua
 
 ## Usage
 
-Stats is hosted on vVolotea CDN at  http://cdn.volotea-virtual.it/stats/bundle.js
+Stats is hosted on vVolotea CDN at  https://cdn.volotea-virtual.it/stats/bundle.js
 To use stats, include at the bottom of body, bunlke.js and then you can specify what stst to replace. You wikll need your VA UUID which is the key at the end of your Statistics URL from Orwell. AN Example UUIS is '44af8377-34f9-401a-aafe-5cfbc2cf8325'.
 
 ```html
